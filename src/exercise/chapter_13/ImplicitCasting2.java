@@ -6,11 +6,18 @@ public class ImplicitCasting2 {
         int myInt = 10;
         double myDouble = 55.1;
         double result1 = myInt + myDouble;
-        System.out.println(result1);
+        System.out.println(result1); // 65.1
 
         int myInt2 = 10;
         long myLong = 20L;
         long result2 = myInt2 * myLong;
-        System.out.println(result2);
+        System.out.println(result2); // 200
+
+        // "/"
+        int number1 = 10;
+        float number2 = 3.0f;
+
+        float result3 = number1 / number2;
+        System.out.println(result3); // 3.333....
     }
 }
