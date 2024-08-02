@@ -15,5 +15,7 @@ public class Teacher {
     // 행위
     void teach(Student student, String subjectName){
         // TODO: 나중에 구현
+        String studentName = student.name;
+        System.out.printf("선생: %s 학생에게 %s 과목을 가르치고 있습니다.\n",studentName,subjectName);
     }
 }

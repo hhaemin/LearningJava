@@ -1,6 +1,6 @@
 package exercise.chapter_25;
 
 public class Subject {
-    String subjectName;
-    String subjectCode;
+    public String subjectName;
+    public String subjectCode;
 }
