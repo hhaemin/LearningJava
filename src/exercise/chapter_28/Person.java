@@ -24,5 +24,8 @@ public class Person {
         this.gender = gender;
         this.age = age;
     }
-
+    //
+    public Person returnMySelf(){
+        return this;
+    }
 }
