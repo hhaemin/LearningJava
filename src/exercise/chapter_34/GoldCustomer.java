@@ -23,7 +23,7 @@ public class GoldCustomer extends Customer {
     }
 
     @Override
-    void printMyInfo(){
+    public void printMyInfo(){
         super.printMyInfo();
     }
 }

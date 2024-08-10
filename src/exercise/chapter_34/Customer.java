@@ -19,7 +19,7 @@ public class Customer {
 
     Customer(){}
 
-    Customer(String name){
+    public Customer(String name){
         this.customerID = "Customer" + serialNums++;
         this.name = name;
         this.customerGrade = "SILVER";
@@ -27,7 +27,7 @@ public class Customer {
         this.bonusPoint = 0;
     }
 
-    void printMyInfo(){
+    public void printMyInfo(){
         System.out.printf("Customer(customerID=%s, name=%s, customerGrade=%s, bonusPoint=%d\n",
                 this.customerID, this.name, this.customerGrade, this.bonusPoint);
     }

@@ -34,7 +34,7 @@ public class VIPCustomer extends Customer {
     }
 
     @Override
-    void printMyInfo(){
+    public void printMyInfo(){
         System.out.print("VIP");
         super.printMyInfo();
     }
