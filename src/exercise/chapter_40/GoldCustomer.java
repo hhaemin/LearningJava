@@ -4,6 +4,10 @@ public class GoldCustomer extends Customer {
     // 속성
     private double discountRatio;
 
+    static {
+        System.out.println("GoldCustomer 클래스가 로딩됩니다.");
+    }
+
     // 행위
     @Override
     public int calculatePrice(int price){

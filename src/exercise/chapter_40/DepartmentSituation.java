@@ -9,12 +9,16 @@ public class DepartmentSituation {
         staff.setSalesAmount(1_000_000);
 
         Customer customer = new VIPCustomer("아이유");
+        Customer customer1 = new Customer("이순신");
+        Customer customer2 = new VIPCustomer("광해군");
+        Customer customer3 = new VIPCustomer("김좌진");
+        Customer customer4 = new Customer("장원영");
+        Customer customer5 = new VIPCustomer("김혜수");
+        Customer customer6 = new GoldCustomer("세종대왕");
+        Customer customer7 = new GoldCustomer("정우성");
 
         Customer[] customerQueue = {
-                new Customer("권율"), new Customer("이순신"), new VIPCustomer("광해군"),
-                customer, new Customer("김좌진"), customer,
-                new Customer("장원영"), customer, new VIPCustomer("김혜수"),
-                new GoldCustomer("세종대왕"),customer, new GoldCustomer("정우성"), new GoldCustomer("손흥민")
+                new GoldCustomer("손흥민")
         };
 
         // 시나리오
