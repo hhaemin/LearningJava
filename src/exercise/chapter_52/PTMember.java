@@ -3,6 +3,8 @@ package exercise.chapter_52;
 import exercise.chapter_51.exceptions.IDFormatException;
 import exercise.chapter_51.exceptions.PositiveNumberException;
 
+import java.time.LocalDateTime;
+
 public class PTMember {
 
     private String ID;
@@ -10,6 +12,7 @@ public class PTMember {
     private Integer height;
     private Integer weight;
     private Gender gender;
+    private LocalDateTime enrollTime;
 
     public PTMember(String name, Integer height, Integer weight, String gender) {
         if (height <= 0) throw new PositiveNumberException("키는 0이하 일 수 없습니다.");
@@ -18,6 +21,7 @@ public class PTMember {
         this.height = height;
         this.weight = weight;
         this.gender = Gender.valueOfTerm(gender);
+        this.enrollTime = LocalDateTime.now();
     }
 
     public void setID(String ID) {
@@ -33,7 +37,8 @@ public class PTMember {
                 ", name='" + name + '\'' +
                 ", height=" + height +
                 ", weight=" + weight +
-                ", gender='" + gender + '\'' +
+                ", gender=" + gender +
+                ", enrollTime=" + enrollTime +
                 '}';
     }
 }
