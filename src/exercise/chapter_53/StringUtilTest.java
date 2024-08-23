@@ -15,11 +15,11 @@ public class StringUtilTest {
         System.out.println("뒤집은 문자열: " + str2);
 
         // 3. 주어진 문자열에서 특정 문자의 개수 세기
-        int countChar = StringUtils.countChar(str, target);
+        int countChar = StringUtils.CharChecker.countChar(str, target);
         System.out.println("'o'는 몇개가 있을까?: " + countChar);
 
         // 4. 주어진 문자열에 특정 문자가 있는지 확인
-        boolean containChar = StringUtils.containsChar(str, target);
+        boolean containChar = StringUtils.CharChecker.containsChar(str, target);
         System.out.println("'o'가 있는지 확인: " + containChar);
     }
 }
