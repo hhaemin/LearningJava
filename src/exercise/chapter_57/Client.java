@@ -19,11 +19,11 @@ public class Client {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
             // 서버에 메시지 전송
-            clientPrintWriter.println("이건 제가 정의한 Client 요청입니다.");
+            clientPrintWriter.println("ID114,원빈");
 
             // 서버로부터 받은 응답 출력
             String response = bufferedReader.readLine();
-            System.out.println("서버로부터 받은 응답: " + response);
+            System.out.println("서버의 응답(고객대기리스트): " + response);
 
             System.out.println("Client가 종료되었습니다.");
 
