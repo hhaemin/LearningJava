@@ -1,8 +1,11 @@
 package exercise.chapter_57;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Customer {
+public class Customer implements Serializable {
+
+    private final long serialVersionUID = 1L;
     // 속성
     static int serialNums = 1;
 

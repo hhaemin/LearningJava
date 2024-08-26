@@ -25,31 +25,23 @@ public class ServerAdvance {
 
                     // 클라이언트로부터 데이터를 받기 위한 InputStream 생성
                     InputStream clientInputStream = clientSocket.getInputStream();
-                    BufferedReader clientBufferedReader = new BufferedReader(new InputStreamReader(clientInputStream));
+                    ObjectInputStream objectInputStream = new ObjectInputStream(clientInputStream);
 
                     // 클라이언트로부터 데이터를 보내기 위한 OutputStream 생성
                     OutputStream serverOutputStream = clientSocket.getOutputStream();
                     PrintWriter printWriter = new PrintWriter(serverOutputStream, true);
 
-                    // inputLine;
-                    String inputLine;
 
-                    // 클라이언트로부터 데이터를 읽고 화면에 출력
-                    while ((inputLine = clientBufferedReader.readLine()) != null) {
-                        System.out.println("클라이언트로 부터 온 요청은 " + inputLine);
+                    Customer customer = (Customer) objectInputStream.readObject();
 
-                        String[] strs = inputLine.split(",");
+                    customerList.add(customer);
+                    System.out.println(customer + "가 대기명단에 추가되었습니다.");
 
-                        String ID = strs[0];
-                        String name = strs[1];
+                    printWriter.println("현재 고객대기명단은: " + customerList);
 
-                        Customer customer = new Customer(ID, name);
-
-                        customerList.add(customer);
-
-                        printWriter.println("현재 고객대기명단은: " + customerList);
-                    }
                 } catch (IOException e) {
+                    throw new RuntimeException(e);
+                } catch (ClassNotFoundException e) {
                     throw new RuntimeException(e);
                 }
             }
