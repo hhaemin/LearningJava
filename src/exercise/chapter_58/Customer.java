@@ -22,6 +22,10 @@ public class Customer implements Serializable {
         return price;
     }
 
+    public int getBonusPoint() {
+        return bonusPoint;
+    }
+
     Customer(){}
 
     public Customer(String customerID, String name) {
